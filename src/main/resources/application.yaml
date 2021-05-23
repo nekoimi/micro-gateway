@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      enabled: true
+      routes:
+        - id: a
+          uri: https://www.baidu.com
+          predicates:
+            - Method=GET
