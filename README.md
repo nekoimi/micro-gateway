@@ -4,7 +4,7 @@
 
 ##### Route 配置 (nacos)
 
-- yaml 配置
+- yaml 配置 (推荐)
 
 ```yaml
   routes:
@@ -26,7 +26,7 @@
         - StripPrefix=1
 ```
 
-- json 配置 (过于复杂，不推荐)
+- json 配置
 
 ```json
 {
