@@ -1,6 +1,49 @@
-# 工程简介
+# 全局网关
 
+- 动态路由，可以使用 yaml or json 配置
 
+##### Route 配置 (nacos)
 
-# 延伸阅读
+- yaml 配置
+
+```yaml
+  routes:
+    - id: a
+      uri: https://www.v2ex.com/
+      predicates:
+        - Path=/t/**
+    - id: b
+      uri: https://www.hao123.com
+      predicates:
+        - Path=/hao123/**
+      filters:
+        - StripPrefix=1
+    - id: c
+      uri: https://www.baidu.com
+      predicates:
+        - Path=/baidu/**
+      filters:
+        - StripPrefix=1
+```
+
+- json 配置 (过于复杂，不推荐)
+
+```json
+{
+  "routes": [
+    {
+      "id": "a",
+      "uri": "https://www.baidu.com/",
+      "predicates": [
+        {
+          "name": "Path",
+          "args": {
+            "pattern": "/baidu/**"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
 
