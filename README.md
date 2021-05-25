@@ -1,6 +1,6 @@
 # 全局网关
 
-- 动态路由，可以使用 yaml or json 配置
+- 动态路由，yaml or json 配置
 
 ##### Route 配置 (nacos)
 
