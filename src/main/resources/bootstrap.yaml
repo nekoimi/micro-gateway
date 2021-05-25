@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: micro-gateway
+  cloud:
+    gateway:
+      enabled: true
+      httpclient:
+        connect-timeout: 5000
+    nacos:
+      server-addr: 192.168.1.202:8848
+      config:
+        enabled: true
+        namespace: 3a1dc9a7-9d14-4482-9ea3-1f18cf9fd98c
+        group: DEFAULT_GROUP
+        timeout: 3000
+        encode: UTF-8
+        refresh-enabled: true
+        max-retry: 3
+        enable-remote-sync-config: true
